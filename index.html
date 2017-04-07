@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-AU-Compatible" conten="IE=edge">
+    <meta name="visewport" content="width=device-width,initial-scale=1">
+    <title>2017测试</title>
+    <link rel="shortcut icon" href="img/hg2017.png">
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/js/bootstrap.min.js">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- <script type="text/javascript" src="js/jquery.banner.js"></script> -->
+    <style>
+        body {
+            background: url("img/black-bg.png");
+            /*height: 2000px;*/
+            opacity: 0.95;
+        }
+        /*#oVideo{
+          margin-top: 5px;
+        }
+        #oVideo:hover{
+          margin-top: 0px;
+          margin-bottom: 5px;
+        -webkit-transition: all 0.2s linear ;
+        }*/
+
+        .oClou1 {
+            width: 100%;
+            height: 100%;
+            border: 1px solid red;
+            box-shadow: -2px -2px 5px pink,-2px -2px 5px pink;
+        }
+
+        .oClou1-1 {
+            border-bottom: 5px solid yellow;
+            box-shadow: 0px 3px 5px lightyellow;
+            border-radius: 5px;
+        }
+        .oClou1-1-1{
+          overflow: hidden;
+          width: 100%;
+          height: 115px;
+        }
+        .oClou1-1-1>div{
+        height:6796px;
+        animation: run 100s linear infinite;
+        }
+        @keyframes run {
+          0%{
+            transform: translateY(0);
+          }
+          100%{
+            transform: translateY(-50%);
+          }
+        }
+        .oClou1-1-1>div:hover{
+          animation-play-state: paused;
+        }
+        .oClou1-1-2{
+          width: 100%;
+          height: 1000px;
+          border: 1px solid blue;
+          box-shadow: 2px 2px 5px lightblue,-2px -2px 5px lightblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="oTop1 clr">
+        <div class="container"></div>
+    </div> -->
+    <nav class="navbar navbar-default" id="top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="#">内蒙古民族大学</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" id="top-ul">
+                    <li class=""><a href="http://www.imun.edu.cn/">内蒙古民族大学官<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">美丽的学校</a></li>
+                    <li><a href="#">美丽的科尔沁</a></li>
+                    <li><a href="http://www.bytravel.cn/view/top10/index343.html">美丽的通辽</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="top-ul1">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">最好的我们<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">我们的学院</a></li>
+                            <li><a href="#">我们的专业</a></li>
+                            <li><a href="#">最好的我们</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="jumbotron">
+        <!-- /**************轮播图预备**********/ -->
+        <!-- /*************样式*************/ -->
+        <div class="">
+            <div class="oxz-1">
+                <!-- *************************播放器********************************** -->
+                <div class="navbar">
+                    <video id="oVideo" controls src="./video/tfz-xxy.mp4">
+               <!-- <source src="./video/" type="mimetype"> -->
+             </video>
+                    <div class="container">
+                        <progress id="oProgress" style="width:80%" value="0" min="0" max="100"></progress>
+                        <span id="oCurrent">00:00</span>
+                        <span>/</span>
+                        <span id="total">00:00</span>
+                    </div>
+                    <ul class="container visible-lg">
+                        <li><button id="oPlay">播放</button></li>
+                        <li><button id="oPause">暂停</button></li>
+                        <li><button id="oMuted">静音</button></li>
+                        <li><input type="range" id="oVlume" value="1" min="0" max="1" step="0.1"></li>
+                        <li><button id="oForward">快进5s</button></li>
+                        <li><button id="oBackward">后退5s</button></li>
+                        <li><button id="oDown">减速</button></li>
+                        <li><button id="oUp">加速</button></li>
+                        <!-- <br> -->
+                        <li><button id="oFullscreen">全屏</button></li>
+                </div>
+            </div>
+            <div class="oxz-2">
+                <!-- **************************小样式*******************************-->
+                <section class="demo ">
+                    <div class="thumb-wrap ">
+                        <ul class="thumb">
+                            <li><img src="img/1.jpg" alt="beautiful-thumbnail-hover-effect-01"></li>
+                            <li><img src="img/2.jpg" alt="beautiful-thumbnail-hover-effect-02"></li>
+                            <li><img src="img/3.jpg" alt="beautiful-thumbnail-hover-effect-03"></li>
+                            <li><img src="img/7.jpg" alt="beautiful-thumbnail-hover-effect-04"></li>
+                            <li><img src="img/5.jpg" alt="beautiful-thumbnail-hover-effect-05"></li>
+                            <li><img src="img/6.jpg" alt="beautiful-thumbnail-hover-effect-06"></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="oxz-3">
+                <!-- ********************游戏****************************** -->
+                <iframe id="oIframe" src="./grame.html" width="100%" height="100%"></iframe>
+            </div>
+            <div class="oxz-4">
+                <!--*************************元素******************************-->
+                <iframe src="./yuansu.html" width="100%" height="100%"></iframe>
+            </div>
+            <div class="oxz-5"></div>
+            <div class="oxz-6"></div>
+        </div>
+    </div>
+    <!--/**************************** 样式插件**************************/ -->
+    <div class="oContent clr">
+        <!--/****************************左侧栏**************************/ -->
+        <div class="content clr" id="oContent">
+            <ul class="bmenu">
+                <li><a href="#">博学明理</a></li>
+                <li><a href="#">崇德至善</a></li>
+                <li><a href="#">I♥YOU MY school</a></li>
+                <li><a href="#">Burning youth</a></li>
+                <li><a href="#">you still have lots more to work on</a></li>
+                <li>
+                    <a href="#">
+                        <div id="divdown1"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="oClou1">
+        <div class="oClou1-1 container">
+            <div class="oClou1-1-1">
+              <div>
+                <h1>歇息只为了更好地起步，走自己的路，让别人说去吧，做自己生命的航行者，而非漂泊者。</h1>
+                <h1>拼命奔跑，华丽跌倒、笑看红尘，潇洒走人间、和大学说再见，却不跟青春道别!</h1>
+                <h1>不管未来有多长久，请珍惜相聚的每一时刻;不管多少个春夏秋冬，我们是永远的!</h1>
+                <h1>活泼可爱是你交朋友的杀手锏!在六年的时光里你我有泪一起流，有笑一起分享!愿你像一条小河，勇往直前，一直流向知识的海洋。祝你像一位有耐力的攀登者，一直攀到科学的最高峰。</h1>
+                <h1>流水不因石而阻，友情不因远而疏，幸福不在别人眼中，而是在自己心里!现在、未来，大家都要狠幸福啊!</h1>
+                <h1>人生就像是一列火车，缘分把咱们挤到了名为大学的同一节车厢里，风雨兼程，一路有你。</h1>
+                <h1>善待生活，生活同样会善待你，不要把人生浪费在正事上，要用微笑面对生活的一切，用微笑为自己加加油!</h1>
+                <h1>大学这四年，感谢有你们的相伴，今日同窗分手，说一声：珍重，相聚相识，我们一起过，真的爱你!</h1>
+                <h1>获致幸福的不二法门是珍视你所拥有的、遗忘你所没有的，毕业之后你们是我的幸福回忆。</h1>
+                <h1>人情历尽秋云厚，世事经多蜀道平，不要让太多昨天占据你的今天，活在当下，活出自己的精彩!</h1>
+                <h1>毕业踏入社会之后要记得：听多数人的意见，和少数人商量，自己做决定。</h1>
+                <h1>与大家在一起的四年是人生中最美好的回忆，等到年老时想起这四年的时光，脸上露出甜蜜的微笑。愿大家都能拥有一个精彩的人生，在整个人生道路上都能顺顺当当。</h1>
+                <h1>你长的虽然没有你自己认为的那么帅气，但是那张能说话的嘴使在你身边的人都逗笑。还有那双仿佛无所不能的眼睛使人感到亲切。愿你在中学的生活里将幽默进行到底。</h1>
+                <h1>又一次经历了毕业季，我明白，原来，我们毕业的是大学，结束的是一段青春。我们把最美好、最宝贵的青春留在了那里。谁不怀念青春，谁不留恋青春 祝那些青春过，也仍然青春的我们从此踏上新的人生历程!</h1>
+                <h1>我与你一起携手走过了X个春秋，友谊也经过了无数磨练，但是这也更加坚定了我们的友谊。虽然我们即将分离，但是我们的友谊永远存在，永远</h1>
+                <h1>时间飞逝，一转眼六年过去了，想起我们在这六年里一起嬉戏，我的眼泪就不由的落下来。因为我们知道我们初中不一定在一起。我希望胆小将成为你的回忆，陪伴你的是勇敢和信心，只有这样才能做好每一件事。愿我们的友谊长存!</h1>
+                <h1>我们在学校结下了深厚的友谊，虽然只有一年的时间里，你也有许多的朋友，我们的友谊比水晶还要透明，互相谦让，从不打架。要毕业了，我希望你朋友像天上的星星一样，在这个世界展开翅膀，自由飞翔。</h1>
+                <h1>六年了，在风风雨雨，坎坎坷坷之后，我们之间的友谊更加深了。百感交集，想说的太多太多如果用一块七棱八角的石头来形容我们初识时的友谊，我相信经过时间的冲刷，将会变成一块光滑的鹅卵石</h1>
+                <h1>我的朋友们，我们要暂时分别了;珍重珍重的话，我也不再说了。在这欲去未去的夜色里，努力铸造几颗小晨星;虽然没有多大光明，但也能使那早行的人高兴。</h1>
+                <h1>如果我能，我愿将心底的一切都揉进今日的分别。但是我不能啊!那么，就让我们以沉默分手吧!要知道，这是一座火山的沉默，它胜过一切话别!</h1>
+                <h1>大学四年，依然没有学会什么叫叛逆。匆匆逝去的日子冲不走头顶的学生光环，毕业了，又留下了!</h1>
+                <h1>相识是缘，相聚是福，四载时光是我最美的回忆，是我最后的学生时代烙印!</h1>
+                <h1>很多事情其实不用着急，最好的总会在最不经意的时候出现，我相信我就是我，我相信明天!</h1>
+                <h1>四年的生活，四年的相知，四年的缘份，最后留下了我们深深的友谊。今日同窗分手，说一声：珍重!明朝校友相逢，贺一句：成功!</h1>
+                <h1>友情是装在瓶里的佳酿，无色无味，多年后开启溢出的是那浓浓的情，珍惜这几年与大家一起的时光，单纯美好，充满希望!</h1>
+                <h1>青春的列车，过站不停、时光匆匆，感谢有你、岁月如歌，青春如画、四年同窗，人生无瑕。</h1>
+                <h1>一个人到底有多幸福取决于她内心的满足程度，春有百花秋有月，夏有凉风冬有雪;知足者，常乐!</h1>
+                <h1>不能把好日子耗费在等待上面，得去寻找，青春是不会因为你的等待而等待。</h1>
+                <h1>难忘的青葱岁月摄在照片下，我们还会碰面吗?这四年，感谢有你们的相伴。</h1>
+                <h1>许多事情回想起来总是那么神奇，大学生活即将结束，微笑着给大家祝福，微笑着面对离别，微笑着道声再见，微笑着走进明天各自的生活，千言万语只用一句话好好生活，好好工作。</h1>
+
+                <h1>歇息只为了更好地起步，走自己的路，让别人说去吧，做自己生命的航行者，而非漂泊者。</h1>
+                <h1>拼命奔跑，华丽跌倒、笑看红尘，潇洒走人间、和大学说再见，却不跟青春道别!</h1>
+                <h1>不管未来有多长久，请珍惜相聚的每一时刻;不管多少个春夏秋冬，我们是永远的!</h1>
+                <h1>活泼可爱是你交朋友的杀手锏!在六年的时光里你我有泪一起流，有笑一起分享!愿你像一条小河，勇往直前，一直流向知识的海洋。祝你像一位有耐力的攀登者，一直攀到科学的最高峰。</h1>
+                <h1>流水不因石而阻，友情不因远而疏，幸福不在别人眼中，而是在自己心里!现在、未来，大家都要狠幸福啊!</h1>
+                <h1>人生就像是一列火车，缘分把咱们挤到了名为大学的同一节车厢里，风雨兼程，一路有你。</h1>
+                <h1>善待生活，生活同样会善待你，不要把人生浪费在正事上，要用微笑面对生活的一切，用微笑为自己加加油!</h1>
+                <h1>大学这四年，感谢有你们的相伴，今日同窗分手，说一声：珍重，相聚相识，我们一起过，真的爱你!</h1>
+                <h1>获致幸福的不二法门是珍视你所拥有的、遗忘你所没有的，毕业之后你们是我的幸福回忆。</h1>
+                <h1>人情历尽秋云厚，世事经多蜀道平，不要让太多昨天占据你的今天，活在当下，活出自己的精彩!</h1>
+                <h1>毕业踏入社会之后要记得：听多数人的意见，和少数人商量，自己做决定。</h1>
+                <h1>与大家在一起的四年是人生中最美好的回忆，等到年老时想起这四年的时光，脸上露出甜蜜的微笑。愿大家都能拥有一个精彩的人生，在整个人生道路上都能顺顺当当。</h1>
+                <h1>你长的虽然没有你自己认为的那么帅气，但是那张能说话的嘴使在你身边的人都逗笑。还有那双仿佛无所不能的眼睛使人感到亲切。愿你在中学的生活里将幽默进行到底。</h1>
+                <h1>又一次经历了毕业季，我明白，原来，我们毕业的是大学，结束的是一段青春。我们把最美好、最宝贵的青春留在了那里。谁不怀念青春，谁不留恋青春 祝那些青春过，也仍然青春的我们从此踏上新的人生历程!</h1>
+                <h1>我与你一起携手走过了X个春秋，友谊也经过了无数磨练，但是这也更加坚定了我们的友谊。虽然我们即将分离，但是我们的友谊永远存在，永远</h1>
+                <h1>时间飞逝，一转眼六年过去了，想起我们在这六年里一起嬉戏，我的眼泪就不由的落下来。因为我们知道我们初中不一定在一起。我希望胆小将成为你的回忆，陪伴你的是勇敢和信心，只有这样才能做好每一件事。愿我们的友谊长存!</h1>
+                <h1>我们在学校结下了深厚的友谊，虽然只有一年的时间里，你也有许多的朋友，我们的友谊比水晶还要透明，互相谦让，从不打架。要毕业了，我希望你朋友像天上的星星一样，在这个世界展开翅膀，自由飞翔。</h1>
+                <h1>六年了，在风风雨雨，坎坎坷坷之后，我们之间的友谊更加深了。百感交集，想说的太多太多如果用一块七棱八角的石头来形容我们初识时的友谊，我相信经过时间的冲刷，将会变成一块光滑的鹅卵石</h1>
+                <h1>我的朋友们，我们要暂时分别了;珍重珍重的话，我也不再说了。在这欲去未去的夜色里，努力铸造几颗小晨星;虽然没有多大光明，但也能使那早行的人高兴。</h1>
+                <h1>如果我能，我愿将心底的一切都揉进今日的分别。但是我不能啊!那么，就让我们以沉默分手吧!要知道，这是一座火山的沉默，它胜过一切话别!</h1>
+                <h1>大学四年，依然没有学会什么叫叛逆。匆匆逝去的日子冲不走头顶的学生光环，毕业了，又留下了!</h1>
+                <h1>相识是缘，相聚是福，四载时光是我最美的回忆，是我最后的学生时代烙印!</h1>
+                <h1>很多事情其实不用着急，最好的总会在最不经意的时候出现，我相信我就是我，我相信明天!</h1>
+                <h1>四年的生活，四年的相知，四年的缘份，最后留下了我们深深的友谊。今日同窗分手，说一声：珍重!明朝校友相逢，贺一句：成功!</h1>
+                <h1>友情是装在瓶里的佳酿，无色无味，多年后开启溢出的是那浓浓的情，珍惜这几年与大家一起的时光，单纯美好，充满希望!</h1>
+                <h1>青春的列车，过站不停、时光匆匆，感谢有你、岁月如歌，青春如画、四年同窗，人生无瑕。</h1>
+                <h1>一个人到底有多幸福取决于她内心的满足程度，春有百花秋有月，夏有凉风冬有雪;知足者，常乐!</h1>
+                <h1>不能把好日子耗费在等待上面，得去寻找，青春是不会因为你的等待而等待。</h1>
+                <h1>难忘的青葱岁月摄在照片下，我们还会碰面吗?这四年，感谢有你们的相伴。</h1>
+                <h1>许多事情回想起来总是那么神奇，大学生活即将结束，微笑着给大家祝福，微笑着面对离别，微笑着道声再见，微笑着走进明天各自的生活，千言万语只用一句话好好生活，好好工作。</h1>
+              </div>
+              </div>
+            </div>
+            <div class="oClou1-1-2"></div>
+        </div>
+    </div>
+    <div class="oClou2"></div>
+    <script src="js/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script src="dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script language="javascript">
+        var interval = 1000;
+
+      function ShowCountDown(year, month, day, divname) {
+
+            var now = new Date();
+
+            var endDate = new Date(year, month - 1, day);
+
+            var leftTime = endDate.getTime() - now.getTime();
+
+            var leftsecond = parseInt(leftTime / 1000);
+
+            //var day1=parseInt(leftsecond/(24*60*60*6));
+
+            var day1 = Math.floor(leftsecond / (60 * 60 * 24));
+
+            var hour = Math.floor((leftsecond - day1 * 24 * 60 * 60) / 3600);
+
+            var minute = Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour * 3600) / 60);
+
+            var second = Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour * 3600 - minute * 60);
+
+            var cc = document.getElementById(divname);
+
+            cc.innerHTML = "距离毕业还有:" + day1 + "天" + hour + "小时" + minute + "分钟" + second + "秒";
+
+        }
+
+        //这是六面行旋转
+        window.setInterval(function() {
+              ShowCountDown(2017, 6, 1, 'divdown1');
+            }, interval);
+
+          $(document).ready(function() {
+
+            var d = new Date();
+            $("#oContent").mouseenter(function outPut() {
+                $(this).css({
+                    "marginLeft": "0px",
+                    "transition": "1.5s all linear"
+                });
+            }).mouseleave(function inPut() {
+                $(this).css({
+                    "marginLeft": "-550px"
+                });
+            });
+
+            var num = 0;
+            // console.log($('.jumbotron  div'));
+            var ooRun = null;
+
+            function oRun() {
+                num -= 60;
+                // var d = new Date();
+                $(".jumbotron>div").css({
+
+                    "transform": "rotateX(" + num + "deg)",
+                });
+                // console.log("11111");
+                // setTimeout(arguments.callee,5000);
+            };
+
+            ooRun = setInterval(oRun, 5000);
+
+
+            $(".jumbotron>div").hover(function() {
+                clearInterval(ooRun);
+            }, function() {
+                ooRun = setInterval(oRun, 5000);
+            });
+         });
+
+        //  window.onload= function(){//次代码执行后 视频后面的结束事件不出来
+        //视频播放器
+        var testVideo = document.getElementById("oVideo");
+           var play = document.getElementById("oPlay");
+           var pause = document.getElementById("oPause");
+           var muted = document.getElementById("oMuted");
+           var volume = document.getElementById("oVlume");
+           var forward = document.getElementById("oForward");
+           var backward = document.getElementById("oBackward");
+           var up = document.getElementById("oUp");
+           var down = document.getElementById("oDown");
+           var fullscreen = document.getElementById("oFullscreen");
+           var progress = document.getElementById("oProgress");
+           var current = document.getElementById("oCurrent");
+           var total = document.getElementById("total");
+
+           play.addEventListener("click", function(e) {
+            testVideo.play();
+            play.disabled = true;
+            pause.disabled = false;
+           });
+
+           pause.addEventListener("click", function(e) {
+            testVideo.pause();
+            pause.disabled = true;
+            play.disabled = false;
+           });
+           volume.addEventListener("change", function(e) {
+            testVideo.volume = volume.value;
+           });
+           testVideo.addEventListener("timeupdate", function(e) {
+            current.innerHTML = flag(parseInt(testVideo.currentTime / 60)) + ":" + flag(parseInt(testVideo.currentTime % 60));
+            progress.value = testVideo.currentTime / testVideo.duration * 100;
+           });
+           //当前视频元数据加载完毕之后，可以获得相关数据
+           testVideo.addEventListener("loadedmetadata", function(e) {
+            total.innerHTML = flag(parseInt(testVideo.duration / 60)) + ":" + flag(parseInt(testVideo.duration % 60));
+           });
+
+           function flag(time) {
+            return time > 10 ? time : "0" + time;
+           }
+
+           forward.addEventListener('click', function(e) {
+             testVideo.currentTime += 5;
+           });
+           backward.addEventListener("click", function(e) {
+            testVideo.currentTime -= 5;
+           });
+           muted.addEventListener("click", function(e) {
+            testVideo.muted = !testVideo.muted;
+            muted.innerHTML = testVideo.muted ? "取消静音" : "静音";
+           });
+           up.addEventListener("click", function(e) {
+            testVideo.playbackRate += 0.1;
+           });
+           down.addEventListener("click", function(e) {
+            testVideo.playbackRate -= 0.1;
+           }); // }
+      // oClou1
+    </script>
+</body>
+</html>
